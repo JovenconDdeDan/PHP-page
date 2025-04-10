@@ -14,7 +14,8 @@ INSERT INTO 'loginid' ('userid', 'username', 'email', 'password') VALUES
 (3,'reconocedorpro', 'cramirez@gmail.com', 'motitas67'),
 (4,'cramirez', 'cramirez@gmail.com', 'motitas67');
 
-ALTER TABLE 'loginid'
+ALTER TABLE 'loginid' 
+    ADD PRIMARY KEY ('userid');
 
 ALTER TABLE 'loginid'
     MODIFY 'userid' int(11) NOT NULL AUTO_INCREMENT;
