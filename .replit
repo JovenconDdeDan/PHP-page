@@ -1,8 +1,14 @@
-modules = ["web"]
-run = "Run"
+run = "php -S 0.0.0.0:8000 -t ."
+
+entrypoint = "index.php"
 
 [nix]
-channel = "stable-24_05"
+channel = "stable-22_11"
 
 [deployment]
-run = ["sh", "-c", "Run"]
+run = ["php", "-S", "0.0.0.0:8000", "-t", "."]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
