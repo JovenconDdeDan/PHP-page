@@ -1,12 +1,15 @@
 
 <?php
 
-$server = "mysql.freedb.tech";
+$server = "localhost";
 $username = "root";
-$password = "camila23";
-$db = "phplogin-usb-1";
+$password = "";
+$db = "phplogin";
 
-$conn = new mysqli($server, $username, $password, $db)
+$conn = new mysqli($server, $username, $password, $db);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 ?>
-
