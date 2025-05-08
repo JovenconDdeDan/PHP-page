@@ -14,7 +14,13 @@ $conn = mysqli_connect($server, $username, $password, $database);
 
 // se verifica si la conexión es exitosa
 
-$connect = new PDO("mysql:host=$server;
-dbname=$database;", $username, $password)
+try{
+  $connect = new PDO("mysql:host=$server;
+  dbname=$database;", $username, $password);
+}  catch(PDOException $e)
+{
+    exit("Error: " . $e->getMessage());
+}
+
 
 ?>

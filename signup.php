@@ -1,3 +1,9 @@
+<?php
+    include("includes/connection.php");
+    
+
+?>
+
 <html>
 
     <head>
@@ -6,8 +12,8 @@
     </head>
 
     <body>
-
-
+        <?php 
+        
 
     </body>
 </html>
