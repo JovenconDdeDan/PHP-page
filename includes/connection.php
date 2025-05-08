@@ -1,26 +1,12 @@
+
 <?php
 
-// se crean las variables para la conexión a la base de datos
-
-$server = "localhost";
+$server = "mysql.freedb.tech";
 $username = "root";
-$password = "motitas2020";
-$database = "login_registro";
+$password = "camila23";
+$db = "phplogin-usb-1";
 
-// se cera la conexión a la base de datos
-// en php el metodo para conectarse a una base de datos es mysqli_connect
-
-$conn = mysqli_connect($server, $username, $password, $database);
-
-// se verifica si la conexión es exitosa
-
-try{
-  $connect = new PDO("mysql:host=$server;
-  dbname=$database;", $username, $password);
-}  catch(PDOException $e)
-{
-    exit("Error: " . $e->getMessage());
-}
-
+$conn = new mysqli($server, $username, $password, $db);
 
 ?>
+

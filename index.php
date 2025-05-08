@@ -1,24 +1,37 @@
-<html> 
 
+
+<html>
     <head>
-    <title> Login / Signup PHP </title>
+    <title> Login / Signup PHP</title>
 
-        <!-- se referencian archivos externos que se utilizan en la página -->
-         <link ref= "stylesheet" href="style.css">
+            <!-- se referencian archivos externos que se utilizan 
+            en la pagina -->
+            <link rel= "stylesheet" href="style.css">
 
     </head>
 
-    <!-- en el body es donde se especifica la estructura de la página -->
-
+    <!--  en el body es donde se especifica la estructura
+          de la pagina-->
     <body>
 
-        <h1> Bienvenido, por favor regístrate o accede a la página </h1>
+            <!-- se incluye el archivo header.php -->
+            <?php 
+                     include "./includes/header.php";
+             ?>
 
-        <div id="enlaces">
+             <h1>   Bienvenido, por favor registrate o accede a la pagina   </h1>
 
-            <a href = "login.php"> si tiene cuenta, acceda aquí</a>
+             <div id="enlaces">
+                     <a href = "login.php"> si tiene cuenta, acceda aqui</a>   
+                     <a href = "signup.php"> Registrese aqui</a>   
+             </div>
 
-            <a href = "signup.php"> Regístrese aquí</a>
 
     </body>
+
+        <?php
+                include "./includes/footer.php";
+         ?>
+
 </html>
+
